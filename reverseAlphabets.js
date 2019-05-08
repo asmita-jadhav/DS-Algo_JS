@@ -17,14 +17,17 @@ for(let c=0;c<input.length;c++){
     }
 }
 
-let temp1=temp.reverse();
-
-console.log(temp1);
-
-for(let c=0;c<temp1.length;c++){        
-    input[c]=temp1[c];
+let inputTemp=input.split('');
+    
+for(let c=0;c<inputTemp.length;c++){        
+    tempchar=inputTemp[c].charCodeAt();
+    //console.log(tempchar);
+    if(tempchar>=65 && tempchar<=90 || tempchar>=97 && tempchar<=122){        
+        inputTemp[c]=temp.pop();
+    }        
 }
 
-console.log(input);
+let output=inputTemp.join("");
+console.log(output);
 
 ///Complexity
